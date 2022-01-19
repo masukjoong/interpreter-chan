@@ -48,14 +48,25 @@ const (
 	RETURN   = "RETURN"
 )
 
+// keyword literal
+const (
+	FUNCTION_LITERAL = "fn"
+	LET_LITERAL      = "let"
+	TRUE_LITERAL     = "true"
+	FALSE_LITERAL    = "false"
+	IF_LITERAL       = "if"
+	ELSE_LITERAL     = "else"
+	RETURN_LITERAL   = "return"
+)
+
 var keywords = map[string]TokenType{
-	"fn":     FUNCTION,
-	"let":    LET,
-	"true":   TRUE,
-	"false":  FALSE,
-	"if":     IF,
-	"else":   ELSE,
-	"return": RETURN,
+	FUNCTION_LITERAL: FUNCTION,
+	LET_LITERAL:      LET,
+	TRUE_LITERAL:     TRUE,
+	FALSE_LITERAL:    FALSE,
+	IF_LITERAL:       IF,
+	ELSE_LITERAL:     ELSE,
+	RETURN_LITERAL:   RETURN,
 }
 
 func LookUpIdent(ident string) TokenType {
